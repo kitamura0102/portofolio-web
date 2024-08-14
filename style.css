@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    color: #282828;
+    background-color: whitesmoke;
+}
+.container{
+    width:80% ;
+    margin: 0 auto;
+}
+
+a{
+    text-decoration:  none;
+    color: #282828;
+}
+nav a{
+    cursor: pointer;
+}
+ul{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 25px;
+    letter-spacing: 1px;
+    
+}
+nav li{
+    list-style: none;
+    font-size: 2rem;
+    
+}
+nav li:hover{
+    font-weight: 700;
+    transition: .1s;
+}
+.logo{
+    margin-right: auto;
+    font-weight: 400;
+    font-size: 2.5rem;
+    
+}
+
+.hero{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    margin: 120px;
+    
+}
+.portrait{
+    width: 500px;
+    background-color: #c4c4c4;
+    height: 500px;
+    border-radius: 50%;
+    
+}
+.portrait img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    margin-top:auto ;
+
+}
+
+.portrait-info p{
+    font-size: 1.2rem;
+    font-weight:600;
+    color: #686D76;
+}
+h1{
+    font-size: 4rem;
+    color: #282828;
+}
+h2{
+    font-size: 2rem;
+    font-weight: 600;
+    color: #686D76;
+}
+.btn{
+    padding: 15px 20px;
+    border-radius: 25px;
+    margin-right: 20px;
+    border: 2px solid #282828;
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: #282828;
+    background-color: #FFF;
+    cursor: pointer;
+}
+.btn:hover{
+    background-color: #282828;
+    color:#fff;
+}
+.reverse-btn{
+    background-color: #282828;
+    color: #FFF;
+}
+
+.reverse-btn:hover{
+    color: #282828;
+    background-color: #FFF;
+}
+.links{
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    
+    margin: 30px auto 0;
+
+}
+i{
+    padding: 10px;
+}
