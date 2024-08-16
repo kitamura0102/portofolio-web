@@ -18,9 +18,9 @@
             <a href="#">Raul <span id="logo-span">Almonte</span></a>
           </li>
           <li><a href="#about">About</a></li>
-          <li><a href="#">Experience</a></li>
-          <li><a href="#">Projects</a></li>
-          <li><a href="#">Contact</a></li>
+          <li><a href="#hero-experience">Experience</a></li>
+          <li><a href="#hero-projects">Projects</a></li>
+          <li><a href="#contact-hero">Contact</a></li>
         </ul>
       </nav>
       <main>
@@ -34,13 +34,13 @@
             <p>a</p>
             <h2>Frontend Developer</h2>
             <a
-              class="btn"
+              class="btn border"
               role="button"
               href="/assets/Raul IT English.pdf"
               download
               >Download CV</a
             >
-            <button class="reverse-btn btn">Contact info</button>
+            <a href="#contact-hero" class="reverse-btn btn border">Contact info</a>
             <div class="links">
               <a
                 href="https://www.linkedin.com/in/ra%C3%BAl-almonte-5836b01b5/"
@@ -56,19 +56,19 @@
         <section class="about-me" id="about">
           <div class="mini-header">
             <p>Get to know more</p>
-            <h3>About me</h3>
+            <h3>About Me</h3>
           </div>
           <div class="about-hero">
             <div class="img-about">
               <img src="/assets/niche.jpg" alt="" class="square"/>
             </div>
             <div class="about-info">
-              <div class="box square">
+              <div class="box square border">
                 <i class="fa-solid fa-certificate fa-xl"></i>
                 <h4>Experience</h4>
                 <p>2+ years <br> Frontend Development</p>
               </div>
-              <div class="box square">
+              <div class="box square border" >
                 
                 <i class="fa-solid fa-user-graduate fa-xl"></i>
                 <h4>Education</h4>
@@ -86,13 +86,13 @@
             </div>
           </div>
         </section>
-        <section class="hero-experience">
+        <section class="hero-experience" id="hero-experience">
           <div class="mini-header">
             <p>Explore My</p>
             <h3>Experience</h3>
           </div>
           <div class="experience">
-            <div class="experience-box square">
+            <div class="experience-box square border">
               <h4>Frontend Development</h4>
               <ul>
                 <li><i class="fa-solid fa-circle-check fa-2xl"></i>HTML</li>
@@ -103,7 +103,7 @@
                 <li><i class="fa-solid fa-circle-check fa-2xl"></i>React</li>
               </ul>
             </div>
-            <div class="experience-box square">
+            <div class="experience-box square border">
               <h4>Backend Development</h4>
               <ul>
                 <li><i class="fa-solid fa-circle-check fa-2xl"></i>Git</li>
@@ -112,39 +112,61 @@
               </ul>
             </div>
         </section>
-        <section class="hero-projects">
+        <section class="hero-projects " id="hero-projects">
           <div class="mini-header">
             <p>Browse My Recent</p>
             <h3>Projects</h3>
           </div>
           <div class="projects">
             
-            <div class="projects-box square">
-              <div class="projects-img squeare">
+            <div class="projects-box square border">
+
                 <img src="/assets/zillow.png" alt="" class="square">
-              </div>
+
               <h5>Project One</h5>
-              <a href="" class="projects-links">GitHub</a>
-              <a href="" class="projects-links">Live Demo</a>
+              <a href="https://github.com/kitamura0102/Zillow" class="projects-links square btn border" target="_blank">GitHub</a>
+              <a href="https://house-practice.netlify.app/" class="projects-links square btn border" target="_blank">Live Demo</a>
             </div>
-            <div class="projects-box square">
-              <div class="projects-img square">
+            <div class="projects-box square border">
+
                 <img src="/assets/bonsai.png" alt="" class="square">
-              </div>
-              <h5>Project One</h5>
-              <a href="" class="projects-links">GitHub</a>
-              <a href="" class="projects-links">Live Demo</a>
+
+              <h5>Project Two</h5>
+              <a href="https://github.com/kitamura0102/Bonsai" class="projects-links square btn border" target="_blank">GitHub</a>
+              <a href="https://bonsai-template.netlify.app/" class="projects-links square btn border" target="_blank">Live Demo</a>
             </div>
-            <div class="projects-box square">
-              <div class="projects-img squeare">
+            <div class="projects-box square border">
+             
                 <img src="/assets/password-generator.png" alt="" class="square">
-              </div>
-              <h5>Project One</h5>
-              <a href="" class="projects-links">GitHub</a>
-              <a href="" class="projects-links">Live Demo</a>
+              
+              <h5>Project Three</h5>
+              <a href="https://github.com/kitamura0102/Password-Generator" class="projects-links square btn border" target="_blank">GitHub</a>
+              <a href="https://generate-password-by-raul.netlify.app/" class="projects-links square btn border" target="_blank">Live Demo</a>
             </div>
           </div>
         </section>
+        <section class="contact-hero" id="contact-hero">
+          <div class="mini-header">
+            <p>Get In Touch</p>
+            <h3>Contact Me</h3>
+          </div>
+          <form class="contact-form square border">
+            <a href="mailto:raul_almonte001@hotmail.com"><i class="fa-solid fa-envelope fa-xl"></i>Raul_almonte001@hotmail.com</a>
+            <a href="https://www.linkedin.com/in/ra%C3%BAl-almonte-5836b01b5/"
+            target="_blank"><i class="fa-solid fa-envelope fa-xl"></i>LinkedIn</a>
+          </form>
+        </section>
+        <footer>
+          <div class="footer">
+            <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#hero-experience">Experience</a></li>
+            <li><a href="#hero-projects">Projects</a></li>
+            <li><a href="#contact-hero">Contact</a></li>
+          </ul>
+          <p>Copyright © 2024 Raul Almonte. All Rights Reserved</p></div>
+          
+        </footer>
       </main>
     </div>
 
