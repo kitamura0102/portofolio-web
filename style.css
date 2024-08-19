@@ -2,20 +2,25 @@
 html {
   scroll-behavior: smooth;
 }
-:root{
-  --main-color:#ea1821;
-  --backgroun-color:#1b1d1c;
-  --extra-color:#c4c393;
-
-
+/* --main-color:#08D9D6;
+  --backgroun-color:#252A34;
+  --extra-color:#FF2E63; */
+:root {
+  --main-color: #3f72af;
+  --backgroun-color: #f9f7f7;
+  --extra-color: #112d4e;
 }
-.border{
+.border {
   border: 2px solid var(--extra-color);
 }
-i{
+i {
   color: var(--main-color);
 }
-h1,h2,h3,h4,h5{
+h1,
+h2,
+h3,
+h4,
+h5 {
   color: var(--main-color);
 }
 body {
@@ -27,20 +32,25 @@ body {
   color: var(--extra-color);
   background-color: var(--backgroun-color);
 }
+
 .container {
   width: 80%;
   margin: 0 auto;
 }
-.hero i:hover{
-color: var(--extra-color);
-transition: .3s;
-}
-a,p,.btn{
+.hero i:hover {
   color: var(--extra-color);
+  transition: 0.3s;
 }
 a {
+  color: var(--main-color);
   text-decoration: none;
 }
+
+p,
+.btn {
+  color: var(--extra-color);
+}
+
 nav a {
   cursor: pointer;
 }
@@ -57,7 +67,8 @@ li {
 nav li {
   font-size: 2rem;
 }
-nav li:hover {
+nav li:hover,
+nav li:active {
   font-weight: 700;
   transition: 0.1s;
 }
@@ -71,43 +82,77 @@ nav li:hover {
   padding: 100px 0;
   display: flex;
   justify-content: space-around;
-  flex-direction: row;
+
   align-items: center;
   text-align: center;
   margin: 120px;
+  flex-wrap: wrap;
 }
 .portrait {
   width: 500px;
-  background-color: var(--main-color);
+  background-color: var(--extra-color);
   height: 500px;
   border-radius: 50%;
 }
 .portrait img {
   width: 100%;
-  height: 100%;
   border-radius: 50%;
   margin-top: auto;
 }
-
+.portrait-info {
+  width: 50%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
 .portrait-info p {
   font-size: 1.2rem;
   font-weight: 600;
 }
 h1 {
-  font-size: 4rem;
+  font-size: 3.5rem;
+  /* overflow: hidden; 
+  border-right: 0.05em solid var(--main-color); 
+  white-space:wrap; 
+  margin: 0 auto; 
+  letter-spacing: 0.1em; 
+  animation: typing 2.5s steps(40, end), blink-caret 0.75s step-end infinite;
+*/
+}
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #3f72af;
+  }
 }
 h2 {
   font-size: 2rem;
   font-weight: 600;
 }
 .btn {
-  padding: 15px 20px;
-  border-radius: 25px;
+  padding: 15px 0;
   margin-right: 20px;
   font-weight: 700;
   font-size: 1.1rem;
   background-color: var(--backgroun-color);
   cursor: pointer;
+  width: 150px;
+  margin-top: 10px;
+  display: inline-block;
 }
 .btn:hover {
   background-color: var(--extra-color);
@@ -132,12 +177,15 @@ h2 {
   margin: 30px auto 0;
 }
 i {
-  padding:16px 20px;
+  padding: 16px 20px;
 }
 
 /* About hero */
 .about-me {
   padding: 100px 0;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
 }
 .mini-header {
   text-align: center;
@@ -146,17 +194,18 @@ h3 {
   font-size: 3rem;
   margin-top: 0;
 }
-
 .img-about {
-  width: 350px;
+  width: 500px;
 }
+
 .about-hero img {
   width: 100%;
 }
 .about-hero {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 }
 .about-info {
   width: 60%;
@@ -164,12 +213,15 @@ h3 {
 .square {
   border-radius: 30px;
 }
-
+.boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 .box {
-
-  width: 40%;
+  width: 300px;
   text-align: center;
-  margin: 25px 10px;
+  margin: 25px 15px;
   padding: 25px;
   display: inline-block;
 }
@@ -197,7 +249,7 @@ h4 {
   padding: 100px 0;
 }
 .experience-box {
-  margin: 0 auto;
+  margin: 10px auto;
 
   display: flex;
   flex-direction: column;
@@ -233,13 +285,16 @@ h4 {
   position: relative;
 }
 .projects-box {
-  max-width: 400px;
+  width: 400px;
   height: 400px;
-
+  
   padding: 15px;
   text-align: center;
   position: relative;
   margin: 10px 0;
+  
+  
+  flex-wrap: wrap;
 }
 .projects-box img {
   width: 100%;
@@ -247,11 +302,7 @@ h4 {
   z-index: 1;
   transition: 0.5s;
 }
-.hero-projects a {
-  padding: 15px 35px;
 
-  width: 25%;
-}
 h5 {
   font-size: 1.5rem;
   font-weight: 600;
@@ -274,10 +325,10 @@ h5 {
   font-weight: 600;
 }
 
-footer{
-padding: 100px 0 0 40px;
+footer {
+  padding: 100px 0 0 40px;
 }
-.footer{
+.footer {
   text-align: center;
 }
 
@@ -297,4 +348,473 @@ footer li {
 footer li:hover {
   font-weight: 700;
   transition: 0.1s;
+}
+
+/* Medias quary */
+/* Mobile */
+@media (max-width: 575px) {
+  body {
+    width: 330px;
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
+  .container {
+    width: 90%;
+  }
+  p {
+    font-size: 1rem;
+  }
+  h1 {
+    font-size: 3rem;
+  }
+  .hero,
+  .portrait-info,
+  .contact-form {
+    margin: 0 auto;
+  }
+  .portrait {
+    width: 290px;
+    height: 290px;
+  }
+  .portrait img {
+    width: 100%;
+  }
+  .portrait-info {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .download-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  .btn {
+    padding: 10px 0;
+    margin: 0 5px;
+    width: 120px;
+    font-size: 1rem;
+  }
+  .about-me p {
+    width: 100%;
+    text-align: center;
+    font-size: 1.1rem;
+  }
+  .img-about {
+    width: 100%;
+  }
+
+  .about-info {
+    width: 100%;
+  }
+  .box {
+    width: 100%;
+  }
+  .projects-box {
+    padding: 0 0 35px 0;
+  }
+  .projects-box a {
+    margin: 10px auto;
+    font-size: 1rem;
+  }
+  .projects-box h5 {
+    font-size: 1.3rem;
+  }
+  .projects-box img:hover {
+    transition: 0.5s;
+    filter: grayscale(0);
+    transform: scale(1.9);
+    position: relative;
+  }
+  .experience-box {
+    width: 99%;
+  }
+  .experience-box ul {
+    grid-template-columns: repeat(2, 150px);
+    grid-template-rows: repeat(3, 50px);
+    gap: 0;
+  }
+  .experience-box li {
+    font-size: 0.8rem;
+  }
+  .experience-box i {
+    padding: 10px;
+  }
+  .contact-form {
+    flex-wrap: wrap;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    border: none;
+  }
+  .contact-form a {
+    margin: 10px 0;
+  }
+  .contact-form i {
+    padding: 0 3px;
+  }
+  .contact-form a {
+    font-size: 0.8rem;
+  }
+  footer {
+    width: 100%;
+    padding: 0;
+  }
+
+  .footer ul {
+    gap: 10px;
+    padding: 10px;
+  }
+  footer li {
+    font-size: 0.8rem;
+    margin: 0;
+    padding: 0;
+  }
+}
+@media (min-width: 576px) and (max-width: 767px) {
+  /* Smartphones en modo paisaje */
+  body {
+    width: 550px;
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
+  .container {
+    width: 90%;
+  }
+  p {
+    font-size: 1rem;
+  }
+  h1 {
+    font-size: 3rem;
+  }
+  .hero,
+  .portrait-info,
+  .contact-form {
+    margin: 0 auto;
+  }
+  .portrait {
+    width: 290px;
+    height: 290px;
+  }
+  .portrait img {
+    width: 100%;
+  }
+  .portrait-info {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .download-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .about-me p {
+    width: 100%;
+    text-align: center;
+    font-size: 1.1rem;
+  }
+  .img-about {
+    width: 100%;
+  }
+
+  .about-info {
+    width: 100%;
+  }
+  .box {
+    width: 100%;
+  }
+  .projects-box {
+    width: 100%;
+    display: flex;
+  }
+  .projects-box a {
+    margin: 10px auto;
+  }
+  .projects-box img:hover {
+    transition: 0.5s;
+    filter: grayscale(0);
+    transform: scale(1.9);
+    position: relative;
+  }
+  .experience-box {
+    width: 99%;
+  }
+  .experience-box ul {
+    grid-template-columns: repeat(2, 150px);
+    grid-template-rows: repeat(3, 50px);
+    gap: 0;
+  }
+  .experience-box li {
+    font-size: 0.8rem;
+  }
+  .experience-box i {
+    padding: 10px;
+  }
+  .contact-form {
+    flex-wrap: wrap;
+    width: 90%;
+    display: flex;
+    border: solid;
+  }
+  .contact-form a {
+    margin: 10px 0;
+  }
+  .contact-form i {
+    padding: 0 3px;
+  }
+  .contact-form a {
+    font-size: 0.8rem;
+  }
+  footer {
+    width: 100%;
+    padding: 0;
+  }
+  .footer p {
+    font-size: 1.3rem;
+  }
+  .footer ul {
+    gap: 20px;
+    padding: 10px;
+  }
+  footer li {
+    font-size: 1.5rem;
+    margin: 0;
+    padding: 0;
+  }
+}
+@media (min-width: 768px) and (max-width: 999px) {
+  /* tablet */
+  body {
+    width: 850px;
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
+  .container {
+    width: 90%;
+  }
+  p {
+    font-size: 1.3rem;
+  }
+  h1 {
+    font-size: 4rem;
+  }
+  .hero,
+  .portrait-info,
+  .contact-form {
+    margin: 0 auto;
+  }
+  .portrait {
+    width: 390px;
+    height: 390px;
+  }
+  .portrait img {
+    width: 100%;
+  }
+  .portrait-info {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .download-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .about-me p {
+    width: 100%;
+    text-align: center;
+    font-size: 1.3rem;
+  }
+  .img-about {
+    width: 100%;
+  }
+
+  .about-info {
+    width: 100%;
+  }
+  .box {
+    width: 100%;
+  }
+  
+  .projects {
+    width: 100%;
+  }
+  .projects-box a {
+    margin: 10px 20px;
+  }
+  .projects-box img:hover {
+    transition: 0.5s;
+    filter: grayscale(0);
+    transform: scale(1.9);
+    position: relative;
+  }
+  .experience-box {
+    width: 40%;
+  }
+  .experience-box ul {
+    grid-template-columns: repeat(2, 150px);
+    grid-template-rows: repeat(3, 50px);
+    gap: 0;
+  }
+  .experience-box li {
+    font-size: 0.9rem;
+  }
+  .experience-box i {
+    padding: 10px;
+  }
+  .contact-form {
+    flex-wrap: wrap;
+    width: 90%;
+    display: flex;
+    border: solid;
+  }
+  .contact-form a {
+    margin: 10px 0;
+  }
+  .contact-form i {
+    padding: 0 3px;
+  }
+  .contact-form a {
+    font-size: 1.5rem;
+  }
+  footer {
+    width: 100%;
+    padding: 100px 0;
+  }
+  .footer p {
+    font-size: 1.2rem;
+  }
+  .footer ul {
+    gap: 20px;
+    padding: 10px;
+  }
+  footer li {
+    font-size: 2.2rem;
+    margin: 0;
+    padding: 0;
+  }
+  nav {
+    display: none;
+  }
+}
+
+@media (min-width: 1000px) and (max-width: 1629px) {
+  /* tablet */
+  body {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+  .container {
+    width: 80%;
+  }
+  p {
+    font-size: 1.3rem;
+  }
+  h1 {
+    font-size: 3rem;
+  }
+  .hero,
+  .portrait-info,
+  .contact-form {
+    margin: 0 auto;
+  }
+  .portrait {
+    width: 390px;
+    height: 390px;
+  }
+  .portrait img {
+    width: 100%;
+  }
+  .portrait-info {
+    width: 50%;
+    margin: 0 auto;
+  }
+  .download-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .about-me p {
+    width: 100%;
+    text-align: center;
+    font-size: 1.3rem;
+  }
+
+  .projects-box {
+    padding: 0 0 35px 0;
+    margin: 10px 0;
+    width: 80%;
+    height: 580px;
+    
+  }
+  .projects {
+    width: 100%;
+  }
+  .projects-box a {
+    margin: 10px 20px;
+  }
+  .img-about {
+    width: 100%;
+  }
+  .about-info {
+    width: 100%;
+  }
+  .projects-box img:hover {
+    transition: 0.5s;
+    filter: grayscale(0);
+    transform: scale(1.9);
+    position: relative;
+  }
+  .experience-box {
+    width: 40%;
+  }
+  .experience-box ul {
+    grid-template-columns: repeat(2, 150px);
+    grid-template-rows: repeat(3, 50px);
+    gap: 0;
+  }
+  .experience-box li {
+    font-size: 0.9rem;
+  }
+  .experience-box i {
+    padding: 10px;
+  }
+  .contact-form {
+    flex-wrap: wrap;
+    width: 90%;
+    display: flex;
+    border: solid;
+  }
+  .contact-form a {
+    margin: 10px 0;
+  }
+  .contact-form i {
+    padding: 0 3px;
+  }
+  .contact-form a {
+    font-size: 1.5rem;
+  }
+  footer {
+    width: 100%;
+    padding: 100px 0;
+  }
+  .footer p {
+    font-size: 1.2rem;
+  }
+  .footer ul {
+    gap: 20px;
+    padding: 10px;
+  }
+  footer li {
+    font-size: 2.2rem;
+    margin: 0;
+    padding: 0;
+  }
 }
