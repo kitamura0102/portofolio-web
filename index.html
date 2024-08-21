@@ -12,7 +12,12 @@
   </head>
   <body>
     <div class="container">
+      
       <nav class="navbar">
+        <div class="hamburger-btn" role="buttonw">
+          <span></span>
+          <span></span>
+          <span></span>
         <ul>
           <li class="logo">
             <a href="#" >Raúl <span id="logo-span">Almonte</span></a>
@@ -24,7 +29,7 @@
         </ul>
       </nav>
       <main>
-        <header class="hero">
+        <header class="hero" >
           <div class="portrait">
             <img src="/assets/portrait.png" alt="Portrait of Raul Almonte" />
           </div>
@@ -56,7 +61,7 @@
             </div>
           </div>
         </header>
-        <section class="about-me" id="about">
+        <section class="about-me hidden" id='about'>
           <div class="mini-header">
             <p>Get to know more</p>
             <h3>About Me</h3>
@@ -92,7 +97,7 @@
             </div>
           </div>
         </section>
-        <section class="hero-experience" id="hero-experience">
+        <section class="hero-experience hidden" id="hero-experience">
           <div class="mini-header">
             <p>Explore My</p>
             <h3>Experience</h3>
@@ -118,7 +123,7 @@
               </ul>
             </div>
         </section>
-        <section class="hero-projects " id="hero-projects">
+        <section class="hero-projects hidden " id="hero-projects" >
           <div class="mini-header">
             <p>Browse My Recent</p>
             <h3>Projects</h3>
@@ -136,8 +141,8 @@
             </div>
             </div>
             <div class="projects-box square border">
-
-                <img src="/assets/bonsai.png" alt="" class="square">
+                
+                <img src="/assets/bonsai.png" alt="">
 
               <h5>Price Website</h5>
               <div class="links-container">
@@ -159,7 +164,7 @@
             </div>
           </div>
         </section>
-        <section class="contact-hero" id="contact-hero">
+        <section class="contact-hero hidden" id="contact-hero" >
           <div class="mini-header">
             <p>Get In Touch</p>
             <h3>Contact Me</h3>
@@ -171,8 +176,10 @@
           </form>
         </section>
         <footer>
-          <div class="footer">
+          <div class="footer hidden">
+            <a href="#" class="footer-logo">Home</a>
             <ul>
+              
             <li><a href="#about">About</a></li>
             <li><a href="#hero-experience">Experience</a></li>
             <li><a href="#hero-projects">Projects</a></li>

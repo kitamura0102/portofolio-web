@@ -13,6 +13,13 @@ html {
 .border {
   border: 2px solid var(--extra-color);
 }
+.hidden{
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out;
+}
+.visible {
+  opacity: 1;
+}
 i {
   color: var(--main-color);
 }
@@ -54,18 +61,39 @@ p,
 nav a {
   cursor: pointer;
 }
-nav ul {
+.hamburger-btn{
+  margin-top: 10px;
   display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 3px;
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+}
+.hamburger-btn span{
+ 
+  width: 30px;
+  height: 3px;
+  background-color: var(--main-colorgit add);
+
+}
+nav ul {
+  display: none;
   justify-content: center;
   gap: 30px;
-  padding: 25px;
+  padding: 25px 0;
   letter-spacing: 1px;
+
 }
 li {
   list-style: none;
+  
 }
 nav li {
   font-size: 2rem;
+  padding: 0;
+  margin: 0;
 }
 nav li:hover,
 nav li:active {
@@ -76,17 +104,19 @@ nav li:active {
   margin-right: auto;
   font-weight: 400;
   font-size: 2.5rem;
+  
 }
 
 .hero {
   padding: 100px 0;
   display: flex;
   justify-content: space-around;
-
   align-items: center;
   text-align: center;
   margin: 120px;
   flex-wrap: wrap;
+  opacity: 1;
+  transition:  1s ease-in-out;
 }
 .portrait {
   width: 500px;
@@ -112,13 +142,12 @@ nav li:active {
 }
 h1 {
   font-size: 3.5rem;
-  /* overflow: hidden; 
-  border-right: 0.05em solid var(--main-color); 
-  white-space:wrap; 
-  margin: 0 auto; 
-  letter-spacing: 0.1em; 
-  animation: typing 2.5s steps(40, end), blink-caret 0.75s step-end infinite;
-*/
+  overflow: hidden;
+  border-right: 0.04em solid var(--main-color);
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: 0.1em;
+  animation: typing 2.5s steps(50, end), blink-caret 0.75s step-end infinite;
 }
 @keyframes typing {
   from {
@@ -278,6 +307,7 @@ h4 {
   flex-wrap: wrap;
 }
 
+
 .projects-box img:hover {
   transition: 0.5s;
   filter: grayscale(0);
@@ -286,7 +316,6 @@ h4 {
 }
 .projects-box {
   width: 400px;
-  height: 400px;
 
   padding: 15px;
   text-align: center;
@@ -300,6 +329,7 @@ h4 {
   filter: grayscale(1);
   z-index: 1;
   transition: 0.5s;
+  border-radius: 25px;
 }
 
 h5 {
@@ -348,23 +378,27 @@ footer li:hover {
   font-weight: 700;
   transition: 0.1s;
 }
+.footer-logo{
+  display: block;
+  font-size: 2.5rem;
+}
 
 /* Medias quary */
 /* Mobile */
 @media (max-width: 575px) {
-  body {
-    width: 330px;
-    margin: 0 auto;
-    box-sizing: border-box;
-  }
-  .container {
-    width: 90%;
+  
+.container{
+  width: 90%;
+}
+  nav ul{
+    display: none;
   }
   p {
     font-size: 1rem;
   }
   h1 {
-    font-size: 3rem;
+    font-size: 2.29rem;
+    margin: 0 auto;
   }
   .hero,
   .portrait-info,
@@ -422,7 +456,7 @@ footer li:hover {
   .projects-box img:hover {
     transition: 0.5s;
     filter: grayscale(0);
-    transform: scale(1.9);
+    transform: scale(1.5);
     position: relative;
   }
   .experience-box {
@@ -469,9 +503,7 @@ footer li:hover {
     margin: 0;
     padding: 0;
   }
-  nav {
-    display: none;
-  }
+  
 }
 @media (min-width: 576px) and (max-width: 767px) {
   /* Smartphones en modo paisaje */
@@ -479,6 +511,9 @@ footer li:hover {
     width: 550px;
     margin: 0 auto;
     box-sizing: border-box;
+  }
+  nav ul{
+    display: none;
   }
   .container {
     width: 90%;
@@ -527,13 +562,11 @@ footer li:hover {
   .box {
     width: 100%;
   }
-  .projects-box {
-    width: 100%;
-    display: flex;
-  }
+
   .projects-box a {
     margin: 10px auto;
   }
+  
   .projects-box img:hover {
     transition: 0.5s;
     filter: grayscale(0);
@@ -585,9 +618,7 @@ footer li:hover {
     margin: 0;
     padding: 0;
   }
-  nav {
-    display: none;
-  }
+
 }
 @media (min-width: 768px) and (max-width: 999px) {
   /* tablet */
@@ -595,6 +626,9 @@ footer li:hover {
     width: 850px;
     margin: 0 auto;
     box-sizing: border-box;
+  }
+  nav ul{
+    display: none;
   }
   .container {
     width: 90%;
@@ -650,6 +684,7 @@ footer li:hover {
   .projects-box a {
     margin: 10px 20px;
   }
+
   .projects-box img:hover {
     transition: 0.5s;
     filter: grayscale(0);
@@ -701,9 +736,7 @@ footer li:hover {
     margin: 0;
     padding: 0;
   }
-  nav {
-    display: none;
-  }
+  
 }
 
 @media (min-width: 1000px) and (max-width: 1629px) {
@@ -716,6 +749,12 @@ footer li:hover {
   }
   .container {
     width: 80%;
+  }
+  nav a{
+    font-size: 2rem;
+  }
+  .logo{
+    font-size: 1  rem;
   }
   p {
     font-size: 1.3rem;
@@ -753,10 +792,8 @@ footer li:hover {
   }
 
   .projects-box {
-    padding: 0 0 35px 0;
-    margin: 10px 0;
-    width: 80%;
-    height: 580px;
+    padding: 0 0 50px 0;
+    margin: 15px 0;
   }
   .projects {
     width: 100%;
@@ -821,4 +858,5 @@ footer li:hover {
     margin: 0;
     padding: 0;
   }
+  
 }
