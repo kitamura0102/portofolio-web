@@ -43,6 +43,7 @@ body {
 .container {
   width: 80%;
   margin: 0 auto;
+  
 }
 .hero i:hover {
   color: var(--extra-color);
@@ -70,6 +71,7 @@ nav a {
   cursor: pointer;
   position: absolute;
   top: 20px;
+  width: 80%;
 }
 .hamburger-btn span{
  
@@ -79,8 +81,8 @@ nav a {
 
 }
 nav ul {
-  display: none;
-  justify-content: center;
+  display: flex;
+  justify-content: space-around;
   gap: 30px;
   padding: 25px 0;
   letter-spacing: 1px;
